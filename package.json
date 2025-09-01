@@ -1,0 +1,43 @@
+{
+  "name": "@macklinu/effect-jscodeshift",
+  "version": "0.0.0",
+  "description": "Helpers for jscodeshift + effect",
+  "packageManager": "pnpm@10.15.1",
+  "type": "module",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development tsdown --watch",
+    "build": "cross-env NODE_ENV=production tsdown",
+    "release": "pnpm build && changeset publish",
+    "test": "vitest",
+    "lint": "oxlint",
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.2",
+    "@changesets/cli": "^2.29.6",
+    "@macklinu/prettier-config": "^0.0.0",
+    "@total-typescript/tsconfig": "^1.0.4",
+    "@types/node": "^24.3.0",
+    "cross-env": "^10.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "oxlint": "^1.14.0",
+    "prettier": "^3.6.2",
+    "tsdown": "^0.14.2",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
