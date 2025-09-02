@@ -1,4 +1,4 @@
 import config from '@macklinu/prettier-config'
 
 /** @type {import('prettier').Config} */
-export default { ...config }
+export default { ...config, printWidth: 100 }
